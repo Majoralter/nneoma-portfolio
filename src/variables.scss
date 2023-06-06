@@ -5,7 +5,7 @@ $h1: clamp(2.5vw, 10.1875rem, 10vw);
 $h2: 2.625rem;
 $h3: 1.25rem;
 $a: 1.5rem;
-$a-menu: 3.4375rem;
+$a-menu: clamp(5vw, 3.9rem, 5vw);
 $p: 1.125rem;
 $tag: 0.625rem;
 
@@ -21,7 +21,6 @@ $pastel-orange: #FFDAB9;
 $pastel-white: #E6E6FA;
 $pastel-green: #B2D8B2;
 $pastel-pink: #E0BBE4;
-$pastel-purple: #E6E6FA;
 $cta-green: #44AB04;
 
 // mixins
