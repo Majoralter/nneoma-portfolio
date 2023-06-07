@@ -61,8 +61,9 @@
         h1{
             color: $black;
             font-size: $h1;
-           font-family: 'DM Serif Display', serif;;
+            font-family: 'DM Serif Display', serif;;
             letter-spacing: -10;
+            text-align: center;
         }
 
         .hero__section{
@@ -125,6 +126,14 @@
                     font-family: $font-heading-body-menu;
                 }
             }
+        }
+    }
+
+    @media (max-width: 768px){
+        .hero{
+            height: fit-content;
+            padding: 5vw;
+            @include display-flex(column, center, flex-start, 2rem);
         }
     }
 </style>

@@ -1,7 +1,7 @@
 <script>
-    import MenuCta from "../assets/say-hello-cta.svg"
     import Logo from "../assets/logo.svg"
     import { fade,fly } from "svelte/transition"
+    import Link from "./Main/Link.svelte";
 
     let menuActive = false
 
@@ -47,7 +47,7 @@
                 Project? <br> Let's work
             </p>
 
-            <a href="mailto:nneomaokoro00@gmail.com"><img src="{MenuCta}" alt="say hello"></a>
+            <Link />
         </div>
     </div>
 </div>
@@ -174,16 +174,6 @@
                 p{
                     color: $black;
                     font-size: $a-menu;
-                }
-
-                a{
-                    img{
-                        @include transition;
-                        object-fit: scale-down;
-                        &:hover{
-                            transform: rotate(20deg);
-                        }
-                    }
                 }
             }
         }
