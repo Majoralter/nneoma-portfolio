@@ -88,7 +88,7 @@
         width: 100vw;
         height: 100vh;
         z-index: 1;
-        position: absolute;
+        position: fixed;
         top: 0;
         @include display-flex(column, center, center, 0);
         background-color: $white;

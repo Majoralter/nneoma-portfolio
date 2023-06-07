@@ -47,6 +47,7 @@
     .hero{
         @include display-flex(column, center, center, 3rem);
         height: 90vh;
+        background-color: $white;
         h1{
             color: $black;
             font-size: $h1;

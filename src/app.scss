@@ -26,6 +26,15 @@
 body,html{
   position: relative;
   scroll-behavior: smooth;
+
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  ::selection{
+    background-color: $orange;
+  }
 }
 
 body{
