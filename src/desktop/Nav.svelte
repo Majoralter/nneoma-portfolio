@@ -87,7 +87,7 @@
     .nav__menu{
         width: 100vw;
         height: 100vh;
-        z-index: 1;
+        z-index: 5;
         position: fixed;
         top: 0;
         @include display-flex(column, center, center, 0);

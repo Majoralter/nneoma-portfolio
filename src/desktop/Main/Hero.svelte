@@ -1,12 +1,19 @@
 <script>
     import Magic from "../../assets/01Hero Section Magic (1).png"
     import Work from "../../assets/02 Hero Section Work.png"
+
+    let viewportWidth = window.innerWidth
+
+    window.addEventListener("resize", () =>{
+        viewportWidth = window.innerWidth
+    })
 </script>
 
 <section class="hero" id="hero">
     <h1>UI/UX DESIGNER</h1>
 
     <div class="hero__section">
+        {#if viewportWidth >=768}
         <div class="hero__section--left">
             <img src="{Magic}" alt="">
             <h3>MAGIC.</h3>
@@ -18,6 +25,7 @@
                 -Page, scroll down for more tea
             </h6>
         </div>
+        {/if}
         <div class="hero__section--mid">
             <h2>
                 SOME AMAZING STUFF.
@@ -29,6 +37,7 @@
                 You may be for a while
             </h6>
         </div>
+        {#if viewportWidth >=768}
         <div class="hero__section--right">
             <img src="{Work}" alt="">
             <h3>WHAT I'VE WORKED ON.</h3>
@@ -40,6 +49,7 @@
                 -Page, scroll down for more tea
             </h6>
         </div>
+        {/if}
     </div>
 </section>
 
@@ -51,22 +61,24 @@
         h1{
             color: $black;
             font-size: $h1;
-            font-family: $font-heading-body-menu;
+           font-family: 'DM Serif Display', serif;;
+            letter-spacing: -10;
         }
 
         .hero__section{
-            @include display-flex(row,center,center,5rem);
-            width: 100%;
+            @include display-flex(row,center,center,5vw);
+            width: fit-content;
+
 
 
             .hero__section--left,.hero__section--right{
                 @include display-flex(column,flex-start,flex-start,.7rem);
                 color: $black;
-                padding: 0 3rem;
+                padding: 0 3vw;
 
                 img{
                     height: 164px;
-                    width: 327px;
+                    width: 100%;
                     object-fit: cover;
                 }
 
