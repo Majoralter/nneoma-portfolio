@@ -13,7 +13,7 @@
                 pin: true,
                 scrub: true,
                 start: "top top",
-                end: "bottom top"
+                end: "bottom+=500px top"
             }
         });
 
