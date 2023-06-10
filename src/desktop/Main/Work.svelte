@@ -158,7 +158,10 @@
             .work__thumbnails--item{
                 @include display-flex(column,center,center,1rem);
                 width: fit-content;
-                // height: fit-content;
+
+                img{
+                    object-fit: scale-down;
+                }
 
                 &::before{
                     z-index: -1;
