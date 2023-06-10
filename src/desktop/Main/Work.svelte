@@ -17,7 +17,6 @@
                 pin: true,
                 scrub: true,
                 start: "top top",
-                end: "bottom top"
             }
         });
 
@@ -44,13 +43,20 @@
     import workFour from "../../assets/06 Work Section Smallworld (04).png"
     import workFive from "../../assets/07 Work section ER (05).png"
     import Arrow from "../../assets/arrow.svg"
+
+      let viewportWidth = window.innerWidth;
+    window.addEventListener("resize", () =>{
+        viewportWidth = window.innerWidth
+    })
 </script>
 
 <section class="work">
+    {#if viewportWidth >= 1024}
     <div class="work__screen">
         <h2><span class="splt-work">W</span><span class="splt-work">O</span><span class="splt-work">R</span><span class="splt-work">K</span></h2>
     </div>
-
+    {/if}
+    <!-- {#if viewportWidth >= 1280} -->
     <div class="work__thumbnails">
         <div class="work__thumbnails--item one">
             <img src="{workOne}" alt="">
@@ -118,6 +124,10 @@
             </div>
         </div>
     </div>
+
+    <!-- {:else} -->
+
+    <!-- {/if} -->
 </section>
 
 <style lang="scss">
@@ -152,7 +162,7 @@
         .work__thumbnails{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            padding: 6vw;
+            margin: 0 auto;
             gap: 50px;
 
             .work__thumbnails--item{
