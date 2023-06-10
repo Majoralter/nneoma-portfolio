@@ -36,7 +36,7 @@
     <div class="nav__menu__links">
         <div class="nav__menu__links--primary">
             <ul transition:fly="{{y: 100, duration: 1000}}">
-                <li><a href="../index.html" class:active={menuActive}>Home</a></li>
+                <li><a href="../" class:active={menuActive}>Home</a></li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <li><a href="#">About</a></li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
