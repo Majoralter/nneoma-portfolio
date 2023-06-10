@@ -79,7 +79,7 @@
         height: 100vh;
         position: relative;
         background-color: $black;
-        padding: 1vw;
+        padding: 3vw 1vw;
         @include display-flex(row, center, center, 2rem);
 
         .about__screen{
