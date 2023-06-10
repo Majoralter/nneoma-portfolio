@@ -123,9 +123,8 @@
 <style lang="scss">
     .work{
         height: fit-content;
-        position: relative;
         background-color: $black;
-        padding: 5vw;
+        position: relative;
 
         .work__screen{
             position: absolute;
@@ -134,6 +133,7 @@
             @include display-flex(column, center, center, 0);
             background-color: $black;
             overflow: hidden;
+            z-index: 2;
 
               h2{
              font-size: 40vw;
@@ -152,14 +152,18 @@
         .work__thumbnails{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            // place-items: center;
+            padding: 6vw;
             gap: 50px;
 
             .work__thumbnails--item{
                 @include display-flex(column,center,center,1rem);
                 width: fit-content;
                 // height: fit-content;
+
+                &::before{
+                    z-index: -1;
+                    opacity: .1;
+                }
 
                 .work__details{
                     width: 100%;
@@ -194,38 +198,93 @@
             }
 
             .one{
+                // position: relative;
                 img{
                     height: 495px;
                     width: auto;
                 }
+
+                &::before{
+                    position: absolute;
+                    top: -2.6rem;
+                    left: 0;
+                    content: "01";
+                    color: $pastel-orange;
+                    font-size: 250px;
+                    font-family: $font-sub-heading-links;
+                }
             }
 
             .two{
+                position: relative;
                 img{
                     height: 247.27px;
                     width: auto;
                 }
+
+                   &::before{
+                    position: absolute;
+                    top: -3rem;
+                    left: -2.5rem;
+                    content: "02";
+                    color: $pastel-white;
+                    font-size: 250px;
+                    font-family: $font-sub-heading-links;
+                }
             }
 
             .three{
+                position: relative;
                 img{
                     height: 295px;
                     width: auto;
                 }
+
+                   &::before{
+                    position: absolute;
+                    top: -2rem;
+                    left: 0;
+                    content: "03";
+                    color: $pastel-pink;
+                    font-size: 250px;
+                    font-family: $font-sub-heading-links;
+                }
             }
 
             .four{
+                position: relative;
                img{
                     height: 638.89px;
                     width: auto;
                }
+
+                  &::before{
+                    position: absolute;
+                    top: -10rem;
+                    left: -2rem;
+                    content: "04";
+                    color: $orange;
+                    font-size: 250px;
+                    font-family: $font-sub-heading-links;
+                }
             }
 
             .five{
+                position: relative;
               img{
                   width: 971px;
                   height: auto;
               }
+
+                 &::before{
+                    position: absolute;
+                    top: -10rem;
+                    left: -5rem;
+                    content: "05";
+                    color: $pastel-green;
+                    font-size: 250px;
+                    font-family: $font-sub-heading-links;
+                }
             }
         }
     }
