@@ -2,6 +2,7 @@
     import Logo from "../assets/logo.svg"
     import { fade,fly } from "svelte/transition"
     import Link from "./Main/Link.svelte";
+    import About from "./Main/About.svelte";
 
     let menuActive = false
 
@@ -153,12 +154,12 @@
                         @include transition;
 
                       &:hover{
-                        color: $green;
+                        color: $orange;
                         text-decoration: underline wavy 5px;
                        }
 
                        &.active{
-                        color: $green;
+                        color: $orange;
                         text-decoration: underline wavy 5px;
                        }
                     }

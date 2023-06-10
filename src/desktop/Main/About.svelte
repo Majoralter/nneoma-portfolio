@@ -13,17 +13,20 @@
                 pin: true,
                 scrub: true,
                 start: "top top",
-                end: "bottom+=500px top"
+                end: "bottom top"
             }
         });
 
+        const mm = gsap.matchMedia()
+
         const text = gsap.utils.toArray(".splt")
 
-        text.forEach(letter =>{
+        mm.add("(min-width: 1024px)", () =>{
+            text.forEach(letter =>{
             tl.to(letter, {
                 rotate: Math.floor(Math.random() * 90),
                 y: 500,
-                duration: 1,
+                duration: 3
             }, 3)
         })
 
@@ -32,6 +35,7 @@
             x: "-100vw",
             delay: 2,
             duration: 2
+        })
         })
     })
 
@@ -42,7 +46,7 @@
 </script>
 
 <section class="about">
-    {#if viewportWidth >=768}
+    {#if viewportWidth >=1024}
     <div class="about__screen">
         <h2><span class="splt">A</span><span class="splt">B</span><span class="splt">O</span><span class="splt">U</span><span class="splt">T</span></h2>
     </div>
@@ -65,7 +69,7 @@
     </div>
 
     <div class="about__section--right">
-        <Link />
+        <Link isWhite = {true} />
     </div>
 </section>
 
@@ -75,7 +79,8 @@
         height: 100vh;
         position: relative;
         background-color: $black;
-        @include display-flex(row, center, center, 3rem);
+        padding: 1vw;
+        @include display-flex(row, center, center, 2rem);
 
         .about__screen{
             position: absolute;
@@ -87,7 +92,7 @@
             
 
             h2{
-             font-size: 40.625rem;
+             font-size: 40vw;
              line-height: 770.25px;
              font-family: $font-sub-heading-links;
              white-space: nowrap;
@@ -102,15 +107,18 @@
 
         .about__section--left{
             @include display-flex(column, flex-start, flex-start, 1rem);
+            padding: 2vw;
 
             h2{
-                font-size: 3.90625rem;
+                font-size: $font-size-xxxl;
+                // line-height: 117px;
                 font-family: $font-heading-body-menu;
+                white-space: nowrap;
             }
 
             h2:first-of-type{
                 color: $pastel-orange;
-                margin-left: 50px;
+                margin-left: 2vw;
 
                 span{
                     color: $pastel-white;
@@ -126,14 +134,26 @@
             }
 
             h2:last-of-type{
-                margin-left: 30px;
+                margin-left: 1vw;
             }
 
             p{
                 font-size: $p;
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
+                white-space: normal;
             }
+        }
+    }
+
+    @media (max-width: 750px){
+        .about{
+            height: fit-content;
+            br{
+                display: none;
+            }
+
+            @include display-flex(column,center,center,0);
         }
     }
 </style>

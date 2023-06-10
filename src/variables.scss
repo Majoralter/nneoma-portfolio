@@ -1,13 +1,22 @@
 // typography
 // font-sizes
 
+// --font-size-sm: clamp(0.8rem, -0.1vw + 0.83rem, 0.75rem);
+// --font-size-base: clamp(1rem, 0vw + 1rem, 1rem);
+
+// --font-size-xl: clamp(1.95rem, 0.83vw + 1.71rem, 2.37rem);
+
 $h1: clamp(10vw, 10.1875rem, 10vw);
-$h2: 5vw;
+$h2: 4vw;
 $h3: 1.25rem;
 $a: 1.5rem;
 $a-menu: clamp(5vw, 3.9rem, 5vw);
 $p: 1.125rem;
 $tag: 0.625rem;
+$font-size-md: clamp(1.25rem, 0.16vw + 1.2rem, 1.33rem);
+$font-size-lg: clamp(1.56rem, 0.43vw + 1.44rem, 1.78rem);
+$font-size-xxl: clamp(2.44rem, 1.42vw + 2.02rem, 3.16rem);
+$font-size-xxxl: clamp(3.05rem, 2.3vw + 2.37rem, 4.21rem);
 
 $font-heading-body-menu:  'Nanum Myeongjo', serif;
 $font-sub-heading-links: 'Bebas Neue', sans-serif;

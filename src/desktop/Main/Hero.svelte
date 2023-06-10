@@ -61,7 +61,7 @@
         h1{
             color: $black;
             font-size: $h1;
-            font-family: 'DM Serif Display', serif;;
+            font-family: $font-heading-body-menu;
             letter-spacing: -10;
             text-align: center;
         }
