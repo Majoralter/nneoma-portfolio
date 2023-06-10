@@ -7,7 +7,12 @@
     onMount(() =>{
         gsap.registerPlugin(ScrollTrigger);
 
-        const tl = gsap.timeline({
+        const mm = gsap.matchMedia()
+
+        const text = gsap.utils.toArray(".splt")
+
+        mm.add("(min-width: 1024px)", () =>{
+                const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".about",
                 pin: true,
@@ -15,13 +20,8 @@
                 start: "top top",
                 end: "bottom+=500px top"
             }
-        });
+             });
 
-        const mm = gsap.matchMedia()
-
-        const text = gsap.utils.toArray(".splt")
-
-        mm.add("(min-width: 1024px)", () =>{
             text.forEach(letter =>{
             tl.to(letter, {
                 rotate: Math.floor(Math.random() * 90),
