@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import gsap from "gsap"
     import { onMount } from 'svelte';
 
@@ -62,4 +62,4 @@
             border-radius: 7px;
         }
     }
-</style>
+</style> -->

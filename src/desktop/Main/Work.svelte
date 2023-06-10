@@ -1,27 +1,26 @@
 <script>
-        import gsap from 'gsap'
+    import gsap from 'gsap'
     import ScrollTrigger from 'gsap/ScrollTrigger'
     import { onMount } from 'svelte';
-    import Link from './Link.svelte';
 
     onMount(() =>{
         gsap.registerPlugin(ScrollTrigger);
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".work",
-                pin: true,
-                scrub: true,
-                start: "top top",
-                end: "bottom+=500px top"
-            }
-        });
 
         const mm = gsap.matchMedia()
 
         const text = gsap.utils.toArray(".splt-work")
 
         mm.add("(min-width: 1024px)", () =>{
+                 const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".work",
+                pin: true,
+                scrub: true,
+                start: "top top",
+                end: "bottom top"
+            }
+        });
+
             text.forEach(letter =>{
             tl.to(letter, {
                 rotate: Math.floor(Math.random() * 90),
@@ -38,24 +37,100 @@
         })
         })
     })
+
+    import workOne from "../../assets/03 Work section Bridger(01).png"
+    import workTwo from "../../assets/04 Work section Vendly (02).png"
+    import workThree from "../../assets/05 Work section Sposh Travels (03).png"
+    import workFour from "../../assets/06 Work Section Smallworld (04).png"
+    import workFive from "../../assets/07 Work section ER (05).png"
+    import Arrow from "../../assets/arrow.svg"
 </script>
 
 <section class="work">
     <div class="work__screen">
         <h2><span class="splt-work">W</span><span class="splt-work">O</span><span class="splt-work">R</span><span class="splt-work">K</span></h2>
     </div>
+
+    <div class="work__thumbnails">
+        <div class="work__thumbnails--item one">
+            <img src="{workOne}" alt="">
+
+            <div class="work__details">
+                <div class="work__details--desc">
+                    <h3>Bridger</h3>
+                    <p>Bridger is an end-to-end platform for B2B <br> payments and credit management.</p>
+                </div>
+
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+            </div>
+        </div>
+        <div class="work__thumbnails--item two">
+            <img src="{workTwo}" alt="">
+
+              <div class="work__details">
+                <div class="work__details--desc">
+                    <h3>Vendly</h3>
+                    <p>Send and receive money using your <br> social media identity.</p>
+                </div>
+
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+            </div>
+        </div>
+        <div class="work__thumbnails--item three">
+            <img src="{workThree}" alt="">
+
+              <div class="work__details">
+                <div class="work__details--desc">
+                    <h3>Sposh Travels</h3>
+                    <p>Enjoy the priviledge of selection from a <br> variety of packages that allow you embark on <br> a vacation and spread your bill payment.</p>
+                </div>
+
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+            </div>
+        </div>
+        <div class="work__thumbnails--item four">
+            <img src="{workFour}" alt="">
+
+              <div class="work__details">
+                <div class="work__details--desc">
+                    <h3>Smallworld</h3>
+                    <p>Experience a connected world and stay up- <br> to-date while connecting with friends and <br> meeting new people on Smallworld</p>
+                </div>
+
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+            </div>
+        </div>
+        <div class="work__thumbnails--item five">
+            <img src="{workFive}" alt="">
+
+              <div class="work__details">
+                <div class="work__details--desc">
+                    <h3>Essential Recruit ER!</h3>
+                    <p>We created a bridge that simplifies the process for nurses to find <br> workplaces and for healthcare systems to find incredible talent, and <br> provide resources to help them thrive in communities across Canada.</p>
+                </div>
+
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <style lang="scss">
     .work{
-        height: 100vh;
+        height: fit-content;
         position: relative;
-        background-color: $orange;
+        background-color: $black;
+        padding: 5vw;
 
         .work__screen{
             position: absolute;
-            height: 100%;
-            width: 100%;
+            height: 100vh;
+            width: 100vw;
             @include display-flex(column, center, center, 0);
             background-color: $black;
             overflow: hidden;
@@ -71,6 +146,86 @@
                 display: inline-block;
                 line-height: 770.25px;
              }
+            }
+        }
+
+        .work__thumbnails{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            // place-items: center;
+            gap: 50px;
+
+            .work__thumbnails--item{
+                @include display-flex(column,center,center,1rem);
+                width: fit-content;
+                // height: fit-content;
+
+                .work__details{
+                    width: 100%;
+                    @include display-flex(row,flex-start,space-between,0);
+
+                    a{
+                        text-decoration: none;
+                        font-size: 18px;
+                        color: $cta-green;
+                        font-weight: 500;
+                        text-align: center;
+
+                        img{
+                            width: 18px;
+                            height: auto;
+                        }
+                    }
+
+                    .work__details--desc{
+                        @include display-flex(column,flex-start,flex-start,1rem);
+
+                        h3{
+                            font-size: $h3;
+                            font-family: $font-heading-body-menu;
+                        }
+
+                        p{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .one{
+                img{
+                    height: 495px;
+                    width: auto;
+                }
+            }
+
+            .two{
+                img{
+                    height: 247.27px;
+                    width: auto;
+                }
+            }
+
+            .three{
+                img{
+                    height: 295px;
+                    width: auto;
+                }
+            }
+
+            .four{
+               img{
+                    height: 638.89px;
+                    width: auto;
+               }
+            }
+
+            .five{
+              img{
+                  width: 971px;
+                  height: auto;
+              }
             }
         }
     }
