@@ -212,6 +212,8 @@
     @media (max-width: 475px){
         .work{
             @include display-flex(column,center,center,1.5rem);
+            padding: 2rem;
+            
             .work__items{
                 padding: 0;
                 gap: 50px;
