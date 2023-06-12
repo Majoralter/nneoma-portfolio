@@ -217,9 +217,12 @@
                 gap: 50px;
                 .work__items--item{
                     width: 75vw;
-
-                    background-color: #434343;
+                    padding: 2vw;
+                    background-color: #343434;
                     border-radius: 1rem;
+                    img{
+                        border-radius: inherit;
+                    }
                 }
 
 
