@@ -191,6 +191,7 @@
     @media (max-width: 475px){
         .work{
             .work__items{
+                padding: 0;
                 .work__items--item{
                     width: 75vw;
                 }
