@@ -10,7 +10,7 @@
 
         const text = gsap.utils.toArray(".splt-work")
 
-        mm.add("(min-width: 1024px)", () =>{
+        mm.add("(min-width: 300px)", () =>{
                  const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".work",
@@ -51,7 +51,7 @@
 </script>
 
 <section class="work">
-    {#if viewportWidth >= 25000}
+    {#if viewportWidth >= 300}
     <div class="work__screen">
         <h2><span class="splt-work">W</span><span class="splt-work">O</span><span class="splt-work">R</span><span class="splt-work">K</span></h2>
     </div>
@@ -154,7 +154,8 @@
         .work__items{
             display: grid;
             place-items: center;
-            grid-template-columns: repeat(auto-fill, minmax(460px,1fr));
+            grid-template-columns: repeat(auto-fill, minmax(600px,1fr));
+            height: fit-content;
             gap: 5vw;
             
             .work__items--item{
