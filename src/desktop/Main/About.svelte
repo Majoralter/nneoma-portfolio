@@ -115,7 +115,7 @@
             h4{
                 color: #434343;
                 font-family: $font-sub-heading-links;
-                font-size: 5vw;
+                font-size: 10vw;
             }
 
             h2{
