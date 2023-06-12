@@ -203,6 +203,7 @@
             @include display-flex(column,center,center,0);
             .work__items{
                 padding: 0;
+                gap: 50px;
                 .work__items--item{
                     width: 75vw;
                 }
