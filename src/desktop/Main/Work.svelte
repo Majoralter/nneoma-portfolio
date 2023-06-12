@@ -221,7 +221,7 @@
                     background-color: #343434;
                     border-radius: 1rem;
                     img{
-                        border-radius: inherit;
+                        border-radius: .7rem;
                     }
                 }
 
