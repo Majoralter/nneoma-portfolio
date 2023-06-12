@@ -108,6 +108,16 @@
         </div>
         <div class="work__items--item five">
             <img src="{workFive}" alt="">
+
+            
+                <div class="work__items--detail">
+                <h3>Essential Recruit ER!</h3>
+                <a href="https://www.notion.so/Bridging-the-gap-ER-s-global-impact-on-Nursing-Recruitment-in-Canada-0f335e25579e4717bd1bbc6850e92fb8?pvs=4">View Project <img src="{Arrow}" alt=""></a>
+
+                <p>
+                We created a bridge that simplifies the process for nurses to find <br> workplaces and for healthcare systems to find incredible talent, and  provide resources to help them thrive in communities across Canada.
+                </p>
+            </div>
         </div>
     </div>
 </section>
