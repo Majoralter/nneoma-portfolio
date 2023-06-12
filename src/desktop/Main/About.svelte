@@ -113,8 +113,9 @@
             padding: 2vw;
 
             h4{
-                color: $white;
+                color: #434343;
                 font-family: $font-sub-heading-links;
+                font-size: 5vw;
             }
 
             h2{
