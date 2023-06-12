@@ -218,7 +218,7 @@
                 padding: 0;
                 gap: 50px;
                 .work__items--item{
-                    width: 75vw;
+                    width: 90vw;
                     padding: 2vw;
                     background-color: #343434;
                     border-radius: 1rem;
