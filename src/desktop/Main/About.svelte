@@ -53,6 +53,9 @@
     {/if}
 
     <div class="about__section--left">
+    {#if viewportWidth <1024}
+    <h4>About Me</h4>
+    {/if}
     <h2>
         Design. <span>Design.</span>
     </h2>
@@ -108,6 +111,11 @@
         .about__section--left{
             @include display-flex(column, flex-start, flex-start, 1rem);
             padding: 2vw;
+
+            h4{
+                color: $white;
+                font-family: $font-sub-heading-links;
+            }
 
             h2{
                 font-size: $font-size-xxxl;
