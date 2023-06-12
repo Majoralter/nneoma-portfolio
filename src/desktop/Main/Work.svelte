@@ -51,83 +51,65 @@
 </script>
 
 <section class="work">
-    {#if viewportWidth >= 1024}
+    {#if viewportWidth >= 25000}
     <div class="work__screen">
         <h2><span class="splt-work">W</span><span class="splt-work">O</span><span class="splt-work">R</span><span class="splt-work">K</span></h2>
     </div>
     {/if}
-    <!-- {#if viewportWidth >= 1280} -->
-    <div class="work__thumbnails">
-        <div class="work__thumbnails--item one">
+
+    <div class="work__items">
+        <div class="work__items--item">
             <img src="{workOne}" alt="">
 
-            <div class="work__details">
-                <div class="work__details--desc">
-                    <h3>Bridger</h3>
-                    <p>Bridger is an end-to-end platform for B2B <br> payments and credit management.</p>
-                </div>
+            <div class="work__items--detail">
+                <h3>Bridger</h3>
+                <a href="https://www.notion.so/Bridger-Boosts-B2B-Efficiency-A-Case-Study-fee300a5490b4429850bc55879e94ea8?pvs=4">View Project <img src="{Arrow}" alt=""></a>
 
-                <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+                <p>
+                    Bridger is an end-to-end platform for B2B <br> payments and credit management.
+                </p>
             </div>
         </div>
-        <div class="work__thumbnails--item two">
+        <div class="work__items--item">
             <img src="{workTwo}" alt="">
 
-              <div class="work__details">
-                <div class="work__details--desc">
-                    <h3>Vendly</h3>
-                    <p>Send and receive money using your <br> social media identity.</p>
-                </div>
+                 <div class="work__items--detail">
+                <h3>Vendly</h3>
+                <a href="https://www.notion.so/Vendly-b112b36420cb46b1bcb1ba729972b9ef?pvs=4">View Project <img src="{Arrow}" alt=""></a>
 
-                <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+                <p>
+                   Send and receive money using your <br> social media identity.
+                </p>
             </div>
         </div>
-        <div class="work__thumbnails--item three">
+        <div class="work__items--item">
             <img src="{workThree}" alt="">
 
-              <div class="work__details">
-                <div class="work__details--desc">
-                    <h3>Sposh Travels</h3>
-                    <p>Enjoy the priviledge of selection from a <br> variety of packages that allow you embark on <br> a vacation and spread your bill payment.</p>
-                </div>
+                <div class="work__items--detail">
+                <h3>Sposh Travels</h3>
+                <a href="https://www.notion.so/Travel-Now-Pay-Later-9f3b3dcf668a437ea26508c08243ae2b?pvs=4">View Project <img src="{Arrow}" alt=""></a>
 
-                <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+                <p>
+                   Enjoy the priviledge of selection from a <br> variety of packages that allow you embark on <br> a vacation and spread your bill payment.
+                </p>
             </div>
         </div>
-        <div class="work__thumbnails--item four">
+        <div class="work__items--item">
             <img src="{workFour}" alt="">
 
-              <div class="work__details">
-                <div class="work__details--desc">
-                    <h3>Smallworld</h3>
-                    <p>Experience a connected world and stay up- <br> to-date while connecting with friends and <br> meeting new people on Smallworld</p>
-                </div>
+                <div class="work__items--detail">
+                <h3>Smallworld</h3>
+                <a href="https://www.notion.so/Smallworld-98c42fb1a41d440795162a8f9e73d67e?pvs=4">View Project <img src="{Arrow}" alt=""></a>
 
-                <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="#">View Project <img src="{Arrow}" alt=""></a>
+                <p>
+                Experience a connected world and stay up- <br> to-date while connecting with friends and <br> meeting new people on Smallworld
+                </p>
             </div>
         </div>
-        <div class="work__thumbnails--item five">
+        <div class="work__items--item five">
             <img src="{workFive}" alt="">
-
-              <div class="work__details">
-                <div class="work__details--desc">
-                    <h3>Essential Recruit ER!</h3>
-                    <p>We created a bridge that simplifies the process for nurses to find <br> workplaces and for healthcare systems to find incredible talent, and <br> provide resources to help them thrive in communities across Canada.</p>
-                </div>
-
-                <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="#">View Project <img src="{Arrow}" alt=""></a>
-            </div>
         </div>
     </div>
-
-    <!-- {:else} -->
-
-    <!-- {/if} -->
 </section>
 
 <style lang="scss">
@@ -159,144 +141,58 @@
             }
         }
 
-        .work__thumbnails{
+        .work__items{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            margin: 0 auto;
-            gap: 50px;
-
-            .work__thumbnails--item{
-                @include display-flex(column,center,center,1rem);
-                width: fit-content;
-
+            place-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(460px,1fr));
+            gap: 5vw;
+            
+            .work__items--item{
+                height: fit-content;
+                width: 460px;
                 img{
-                    object-fit: scale-down;
-                }
-
-                &::before{
-                    z-index: -1;
-                    opacity: .1;
-                }
-
-                .work__details{
                     width: 100%;
-                    @include display-flex(row,flex-start,space-between,0);
+                    height: 50%;
+                    object-fit: scale-down;
+                    cursor: pointer;
 
-                    a{
-                        text-decoration: none;
-                        font-size: 18px;
-                        color: $cta-green;
-                        font-weight: 500;
-                        text-align: center;
-
-                        img{
-                            width: 18px;
-                            height: auto;
-                        }
-                    }
-
-                    .work__details--desc{
-                        @include display-flex(column,flex-start,flex-start,1rem);
-
-                        h3{
-                            font-size: $h3;
-                            font-family: $font-heading-body-menu;
-                        }
-
-                        p{
-                            font-size: 16px;
-                        }
+                    &:hover{
+                        scale: 0.99;
+                        @include transition;
                     }
                 }
             }
 
-            .one{
-                // position: relative;
-                img{
-                    height: 495px;
-                    width: auto;
+            .work__items--detail{
+                @include display-flex(row,center,space-between,.7rem);
+                flex-wrap: wrap;
+                color: $white;
+
+                a{
+                    @include display-flex(row,center,center,.3rem);
+                    white-space: nowrap;
+                    text-decoration: none;
+                    color: $cta-green;
                 }
 
-                &::before{
-                    position: absolute;
-                    top: -2.6rem;
-                    left: 0;
-                    content: "01";
-                    color: $pastel-orange;
-                    font-size: 250px;
-                    font-family: $font-sub-heading-links;
-                }
-            }
-
-            .two{
-                position: relative;
-                img{
-                    height: 247.27px;
-                    width: auto;
+                h3{
+                    font-size: 28px;
+                    font-family: $font-heading-body-menu;
                 }
 
-                   &::before{
-                    position: absolute;
-                    top: -3rem;
-                    left: -2.5rem;
-                    content: "02";
-                    color: $pastel-white;
-                    font-size: 250px;
-                    font-family: $font-sub-heading-links;
+                p{
+                    font: 16px;
+                    line-height: 23px;
                 }
             }
+        }
+    }
 
-            .three{
-                position: relative;
-                img{
-                    height: 295px;
-                    width: auto;
-                }
-
-                   &::before{
-                    position: absolute;
-                    top: -2rem;
-                    left: 0;
-                    content: "03";
-                    color: $pastel-pink;
-                    font-size: 250px;
-                    font-family: $font-sub-heading-links;
-                }
-            }
-
-            .four{
-                position: relative;
-               img{
-                    height: 638.89px;
-                    width: auto;
-               }
-
-                  &::before{
-                    position: absolute;
-                    top: -10rem;
-                    left: -2rem;
-                    content: "04";
-                    color: $orange;
-                    font-size: 250px;
-                    font-family: $font-sub-heading-links;
-                }
-            }
-
-            .five{
-                position: relative;
-              img{
-                  width: 971px;
-                  height: auto;
-              }
-
-                 &::before{
-                    position: absolute;
-                    top: -10rem;
-                    left: -5rem;
-                    content: "05";
-                    color: $pastel-green;
-                    font-size: 250px;
-                    font-family: $font-sub-heading-links;
+    @media (min-width: 475px){
+        .work{
+            .work__items{
+                .work__items--item{
+                    width: 80vw;
                 }
             }
         }
