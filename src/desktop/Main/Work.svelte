@@ -188,11 +188,11 @@
         }
     }
 
-    @media (min-width: 475px){
+    @media (max-width: 475px){
         .work{
             .work__items{
                 .work__items--item{
-                    width: 80vw;
+                    width: 75vw;
                 }
             }
         }
