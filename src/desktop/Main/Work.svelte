@@ -144,7 +144,7 @@
         .work__items{
             display: grid;
             place-items: center;
-            grid-template-columns: repeat(auto-fit, minmax(460px,1fr));
+            grid-template-columns: repeat(auto-fill, minmax(460px,1fr));
             gap: 5vw;
             
             .work__items--item{
@@ -190,10 +190,22 @@
 
     @media (max-width: 475px){
         .work{
+            @include display-flex(column,center,center,0);
             .work__items{
                 padding: 0;
                 .work__items--item{
                     width: 75vw;
+                }
+
+
+                .work__items--detail{
+                    p{
+                        white-space: normal;
+
+                        br{
+                            display: none;
+                        }
+                    }
                 }
             }
         }
