@@ -57,6 +57,10 @@
     </div>
     {/if}
 
+    {#if viewportWidth <1024}
+    <h4>About Me</h4>
+    {/if}
+
     <div class="work__items">
         <div class="work__items--item">
             <img src="{workOne}" alt="">
@@ -150,6 +154,12 @@
              }
             }
         }
+
+         h4{
+                color: #434343;
+                font-family: $font-sub-heading-links;
+                font-size: 10vw;
+            }
 
         .work__items{
             display: grid;
