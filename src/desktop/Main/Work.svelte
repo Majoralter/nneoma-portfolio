@@ -58,7 +58,7 @@
     {/if}
 
     {#if viewportWidth <1024}
-    <h4>About Me</h4>
+    <h4>Work</h4>
     {/if}
 
     <div class="work__items">
@@ -217,6 +217,9 @@
                 gap: 50px;
                 .work__items--item{
                     width: 75vw;
+
+                    background-color: #434343;
+                    border-radius: 1rem;
                 }
 
 
