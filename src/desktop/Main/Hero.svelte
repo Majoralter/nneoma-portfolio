@@ -11,7 +11,13 @@
 </script>
 
 <section class="hero" id="hero">
+    {#if viewportWidth > 475}
     <h1>UI/UX DESIGNER</h1>
+    {/if}
+
+    {#if viewportWidth <= 475}
+    <h1>UI/UX <br> DESIG <br> NER</h1>
+    {/if}
 
     <div class="hero__section">
         <div class="hero__section--left">
@@ -125,8 +131,9 @@
     @media (max-width: 475px){
         .hero{
             h1{
-                font-size: 18vw;
+                font-size: 15vw;
                 white-space: normal;
+                text-align: center;
             }
         }
     }
