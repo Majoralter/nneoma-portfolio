@@ -131,9 +131,10 @@
     @media (max-width: 475px){
         .hero{
             h1{
-                font-size: 15vw;
+                font-size: 17vw;
                 white-space: normal;
                 text-align: center;
+                letter-spacing: -3px;
             }
         }
     }
