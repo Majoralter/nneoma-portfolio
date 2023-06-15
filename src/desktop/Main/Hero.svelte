@@ -1,6 +1,7 @@
 <script>
     import Magic from "../../assets/01Hero Section Magic (1).png"
     import Work from "../../assets/02 Hero Section Work.png"
+    import Heromid from "../../assets/Frame 7.png"
 
     let viewportWidth = window.innerWidth
 
@@ -13,7 +14,6 @@
     <h1>UI/UX DESIGNER</h1>
 
     <div class="hero__section">
-        {#if viewportWidth >=768}
         <div class="hero__section--left">
             <img src="{Magic}" alt="">
             <h3>MAGIC.</h3>
@@ -25,18 +25,18 @@
                 -Page, scroll down for more tea
             </h6>
         </div>
-        {/if}
+        {#if viewportWidth >=768}
         <div class="hero__section--mid">
-            <h2>
-                SOME AMAZING STUFF.
-            </h2>
-            <h3>
+            <img src="{Heromid}" alt="">
+            <h3>RUNDOWN.</h3>
+            <p>
                 You're reading a quick rundown of <br> Nneoma Okoro's work. Reach out, <br> let's create magic.
-            </h3>
+            </p>
             <h6>
                 You may be for a while
             </h6>
         </div>
+        {/if}
         {#if viewportWidth >=768}
         <div class="hero__section--right">
             <img src="{Work}" alt="">
@@ -72,7 +72,7 @@
 
 
 
-            .hero__section--left,.hero__section--right{
+            .hero__section--left,.hero__section--mid,.hero__section--right{
                 @include display-flex(column,flex-start,flex-start,.7rem);
                 color: $black;
                 padding: 0 3vw;
@@ -105,27 +105,6 @@
             .hero__section--right{
                 border-left: solid 1px #EAEAEA;
             }
-
-            .hero__section--mid{
-                @include display-flex(column, center, center, 2rem);
-                text-align: center;
-                color: $black;
-
-                h2{
-                    font-size: $h2;
-                    font-family: $font-sub-heading-links;
-                }
-
-                h3{
-                    font-size: $p;
-                    font-family: $font-heading-body-menu; 
-                }
-
-                 h6{
-                    font-size: $tag;
-                    font-family: $font-heading-body-menu;
-                }
-            }
         }
     }
 
@@ -134,6 +113,19 @@
             height: 80vh;
             padding: 5vw;
             @include display-flex(column, center, center, 2rem);
+
+            .hero__section--left{
+                border-right: none;
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 475px){
+        .hero{
+            h1{
+                font-size: 15vw;
+            }
         }
     }
 </style>

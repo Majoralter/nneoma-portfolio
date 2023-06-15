@@ -110,7 +110,7 @@
 
         .about__section--left{
             @include display-flex(column, flex-start, flex-start, 1rem);
-            padding: 2vw;
+            padding: 5vw;
 
             h4{
                 color: #434343;
@@ -120,7 +120,6 @@
 
             h2{
                 font-size: $font-size-xxxl;
-                // line-height: 117px;
                 font-family: $font-heading-body-menu;
                 white-space: nowrap;
             }

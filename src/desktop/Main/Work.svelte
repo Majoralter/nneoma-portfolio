@@ -131,6 +131,7 @@
         height: fit-content;
         background-color: $black;
         position: relative;
+        width: 100vw;
 
         .work__screen{
             position: absolute;
@@ -167,6 +168,7 @@
             grid-template-columns: repeat(auto-fill, minmax(600px,1fr));
             height: fit-content;
             gap: 5vw;
+            padding: 5vw;
             
             .work__items--item{
                 height: fit-content;
@@ -209,7 +211,7 @@
         }
     }
 
-    @media (max-width: 475px){
+    @media (max-width: 1023px){
         .work{
             @include display-flex(column,center,center,1.5rem);
             padding: 2.5vw;
