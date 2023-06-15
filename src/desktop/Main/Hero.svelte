@@ -62,8 +62,9 @@
             color: $black;
             font-size: $h1;
             font-family: $font-heading-body-menu;
-            letter-spacing: -10;
+            letter-spacing: -5px;
             text-align: center;
+            font-weight: lighter;
         }
 
         .hero__section{
@@ -124,7 +125,8 @@
     @media (max-width: 475px){
         .hero{
             h1{
-                font-size: 15vw;
+                font-size: 18vw;
+                white-space: normal;
             }
         }
     }
