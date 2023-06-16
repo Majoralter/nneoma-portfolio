@@ -135,6 +135,7 @@
                 white-space: normal;
                 text-align: center;
                 letter-spacing: -3px;
+                line-height: 1.2;
             }
         }
     }
