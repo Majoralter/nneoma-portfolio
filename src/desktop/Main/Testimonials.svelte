@@ -167,7 +167,6 @@
     @media (max-width: 768px){
         .testimonial{
             height: 100vh;
-            padding: 2vw 0 2vw 4vw;
             swiper-container{
                 height: 70%;
                 swiper-slide{
