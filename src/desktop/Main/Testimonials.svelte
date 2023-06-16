@@ -25,7 +25,7 @@
         speed="1200"
         breakpoints={{
             300:{
-                slidesPerView: 1,
+                slidesPerView: 1.1,
                 spaceBetween: 30
             },
             1024: {
@@ -134,10 +134,9 @@
 
             swiper-slide{
                 height: 100%;
-                // width: 100%;
                 background-color: orange;
                 @include display-flex(row, center, space-between, 0);
-                padding: 45px 43px;
+                padding: 2.8125rem 2.6875rem;
 
                 h3{
                     font-size:  3vw;
