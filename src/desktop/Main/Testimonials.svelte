@@ -165,13 +165,14 @@
 
     @media (max-width: 768px){
         .testimonial{
-            height: 80vh;
+            height: 100vh;
+            padding: 2vw 0 2vw 2vw;
             swiper-container{
                 height: 70%;
                 swiper-slide{
                     flex-direction: column;
-                    text-align: center;
                     height: 100%;
+                    padding: 5vw 2vw;
                     br{
                         display: none;
                     }
