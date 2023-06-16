@@ -134,7 +134,7 @@
 
             swiper-slide{
                 height: 100%;
-                width: 100%;
+                // width: 100%;
                 background-color: orange;
                 @include display-flex(row, center, space-between, 0);
                 padding: 45px 43px;
