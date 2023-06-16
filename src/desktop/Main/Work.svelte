@@ -226,6 +226,7 @@
                     border-radius: 1rem;
                     img{
                         border-radius: .7rem;
+                        max-width: 100%;
                     }
                 }
 
