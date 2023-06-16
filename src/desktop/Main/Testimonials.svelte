@@ -25,7 +25,8 @@
         speed="1200"
         breakpoints={{
             300:{
-                slidesPerView: 1.2
+                slidesPerView: 1.2,
+                spaceBetween: 30
             },
             1024: {
                 slidesPerView: 1.5
