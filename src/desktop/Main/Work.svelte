@@ -165,7 +165,7 @@
         .work__items{
             display: grid;
             place-items: center;
-            grid-template-columns: repeat(auto-fill, minmax(600px,1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
             height: fit-content;
             gap: 5vw;
             padding: 5vw;

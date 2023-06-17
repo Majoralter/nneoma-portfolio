@@ -177,7 +177,7 @@
                     }
 
                     h3{
-                        font-size: 5vw;
+                        font-size: 7vw;
                         line-height: normal;
                     }
                 }
