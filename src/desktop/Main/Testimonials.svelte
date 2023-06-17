@@ -19,9 +19,7 @@
     <swiper-container
         slides-per-view="1.5"
         space-between="50"
-        autoplay-delay="500"
         loop="true"
-        autoplay-disable-on-interaction="false"
         speed="1200"
         breakpoints={{
             300:{
