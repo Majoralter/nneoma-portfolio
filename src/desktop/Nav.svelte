@@ -37,9 +37,9 @@
             <ul transition:fly="{{y: 100, duration: 1000}}">
                 <li><a href="/" class:active={menuActive}>Home</a></li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
-                <li><a href="#">About</a></li>
+                <li><a href="#about" on:click={handleClick}>About</a></li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
-                <li><a href="#">Work</a></li>
+                <li><a href="#work" on:click={handleClick}>Work</a></li>
             </ul>
         </div>
         <div class="nav__menu__links--secondary" transition:fly="{{x: 100, duration: 1000}}">

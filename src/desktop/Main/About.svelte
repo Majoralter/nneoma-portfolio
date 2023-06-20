@@ -45,7 +45,7 @@
     })
 </script>
 
-<section class="about">
+<section class="about" id="about">
     {#if viewportWidth >= 1024}
     <div class="about__screen">
         <h2><span class="splt">A</span><span class="splt">B</span><span class="splt">O</span><span class="splt">U</span><span class="splt">T</span></h2>

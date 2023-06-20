@@ -50,7 +50,7 @@
     })
 </script>
 
-<section class="work">
+<section class="work" id="work">
     {#if viewportWidth >= 1024}
     <div class="work__screen">
         <h2><span class="splt-work">W</span><span class="splt-work">O</span><span class="splt-work">R</span><span class="splt-work">K</span></h2>
