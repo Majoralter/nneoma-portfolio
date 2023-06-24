@@ -222,7 +222,7 @@
                 .work__items--item{
                     width: 90vw;
                     padding: 2vw;
-                    background-color: #343434;
+                    background-color: #101010;
                     border-radius: 1rem;
                     img{
                         border-radius: .7rem;
