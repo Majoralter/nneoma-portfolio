@@ -78,6 +78,7 @@
     </p>
 
  
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
     <p style="color: #44AB04; cursor: pointer;" on:click={handleThis} class:thisActive={isVisible}>Read more</p>
     </div>
 
@@ -166,10 +167,6 @@
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
                 white-space: normal;
-
-                &.thisActive{
-                color: red;
-                }
             }
         }
 
