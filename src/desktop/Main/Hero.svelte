@@ -123,7 +123,7 @@
 
             .hero__section--left{
                 border-right: none;
-                padding: 0 2vw 0;
+                padding: 0 4vw 0;
             }
         }
     }
