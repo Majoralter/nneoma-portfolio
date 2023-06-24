@@ -171,7 +171,6 @@
                     flex-direction: column;
                     height: 70%;
                     padding: 26px;
-                    text-align: center;
                     justify-content: center;
                     gap: 3em;
                     br{
@@ -193,8 +192,13 @@
 
                         .first--col{
                             p{
-                                font-size: 14px;
+                                font-size: 15px;
+                                line-height: 26px;
                             }
+                        }
+
+                        p{
+                            font-size: 12px;
                         }
                     }
                 }
