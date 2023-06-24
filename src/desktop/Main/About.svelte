@@ -3,6 +3,7 @@
     import ScrollTrigger from 'gsap/ScrollTrigger'
     import { onMount } from 'svelte';
     import Link from './Link.svelte';
+    import { fade } from 'svelte/transition'
 
     onMount(() =>{
         gsap.registerPlugin(ScrollTrigger);
@@ -13,12 +14,12 @@
 
         mm.add("(min-width: 1024px)", () =>{
                 const tl = gsap.timeline({
-            scrollTrigger: {
+                scrollTrigger: {
                 trigger: ".about",
                 pin: true,
                 scrub: true,
                 start: "top top",
-                end: "bottom+=500px top"
+                end: "bottom+=1000px top"
             }
              });
 
@@ -43,6 +44,12 @@
     window.addEventListener("resize", () =>{
         viewportWidth = window.innerWidth
     })
+
+    let isVisible = false
+
+    const handleThis = () =>{
+        isVisible = !isVisible
+    }
 </script>
 
 <section class="about" id="about">
@@ -69,10 +76,19 @@
     <p>
         Hello! My name is Nneoma Okoro. I am a UI/UX Designer interested in creating seamless <br> user experiences that solve problems while maintaining a visually appealing interface to <br> engage users. After in-depth research and understanding of users' frustrations and <br> needs, I create design solutions to address them by simplifying complexity and <br> enhancing usability.
     </p>
+
+ 
+    <p style="color: #44AB04; cursor: pointer;" on:click={handleThis} class:thisActive={isVisible}>Read more</p>
     </div>
 
     <div class="about__section--right">
         <Link isWhite = {true} />
+
+        {#if isVisible}
+        <p transition:fade>
+            On the other hand, when I'm not designing, you'll catch me listening <br> to a lot of The Weeknd and Afrobeats. I also engage in playing <br> monopoly, scrabble and paintball sessions with friends. Oh, I watch a <br> lot of football and sitcoms! Friends, The Big Bang Theory, Young <br> Sheldon, How I Met Your Mother. So whether I'm crafting designs, <br> listening to amazing stuff, battling it out in games, cheering on my <br> favourite team or laughing at sitcoms, I'm always seeking inspiration <br> in the things that bring me alive.
+        </p>
+        {/if}
     </div>
 </section>
 
@@ -150,6 +166,20 @@
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
                 white-space: normal;
+
+                &.thisActive{
+                color: red;
+                }
+            }
+        }
+
+        .about__section--right{
+            padding: 5vw;
+            p{
+                font-size: $p;
+                font-family: $font-heading-body-menu;
+                line-height: 34px;
+                white-space: normal;
             }
         }
     }
@@ -162,6 +192,10 @@
             }
 
             @include display-flex(column,center,center,0);
+
+            .about__section--right{
+            @include display-flex(column-reverse,center,center,0);
+            }
         }
     }
 </style>
