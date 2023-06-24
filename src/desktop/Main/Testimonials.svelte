@@ -110,7 +110,7 @@
     .testimonial{
         height: 100vh;
         background-color: $black;
-        padding: 5vw 0 5vw 3vw;
+        padding: 5vw 0 0 3vw;
 
         .top--col{
             @include display-flex(row, center, space-between, 0);
