@@ -100,7 +100,7 @@
         position: relative;
         background-color: $black;
         padding: 3rem 1vw;
-        @include display-flex(row, center, center, 2rem);
+        @include display-flex(row, center, center, 0);
 
         .about__screen{
             position: absolute;
