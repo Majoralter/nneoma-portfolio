@@ -40,7 +40,8 @@
         })
     })
 
-    let viewportWidth = window.innerWidth;
+    let viewportWidth = window.innerWidth
+
     window.addEventListener("resize", () =>{
         viewportWidth = window.innerWidth
     })
@@ -60,9 +61,10 @@
     {/if}
 
     <div class="about__section--left">
-    {#if viewportWidth <1024}
+    {#if viewportWidth < 1024}
     <h4>About Me</h4>
     {/if}
+
     <h2>
         Design. <span>Design.</span>
     </h2>
