@@ -192,7 +192,7 @@
 
             @include display-flex(column,center,center,0);
 
-            .about__section--right{
+            .about__section--left{
                 p{
                     white-space: normal;
                 }
