@@ -61,10 +61,10 @@
     {/if}
 
     <div class="about__section--left">
-    {#if viewportWidth < 1024}
+    {#if viewportWidth <1024}
     <h4>About Me</h4>
     {/if}
-
+    
     <h2>
         Design. <span>Design.</span>
     </h2>
@@ -168,7 +168,7 @@
                 font-size: $p;
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
-                white-space: nowrap;
+                white-space: pre;
             }
         }
 
@@ -178,7 +178,7 @@
                 font-size: $p;
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
-                white-space: nowrap;
+                white-space: pre;
             }
         }
     }
@@ -193,7 +193,17 @@
             @include display-flex(column,center,center,0);
 
             .about__section--right{
+                p{
+                    white-space: normal;
+                }
+            }
+
+            .about__section--right{
             @include display-flex(column-reverse,center,center,0);
+
+            p{
+                white-space: normal;
+            }
             }
         }
     }

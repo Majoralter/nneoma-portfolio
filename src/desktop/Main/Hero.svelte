@@ -117,7 +117,7 @@
 
     @media (max-width: 768px){
         .hero{
-            height: 80vh;
+            height: 100vh;
             padding: 5vw;
             @include display-flex(column, center, center, 2rem);
 
@@ -130,6 +130,12 @@
 
     @media (max-width: 475px){
         .hero{
+          p{
+            br{
+                display: none;
+            }
+          }
+
             h1{
                 font-size: 17vw;
                 white-space: normal;
