@@ -86,7 +86,7 @@
 
     @media (max-width: 768px){
         .footer{
-            gap: 2rem;
+            gap: 3.2rem;
             h3{
                 br{
                     display: none;

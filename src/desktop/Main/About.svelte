@@ -166,7 +166,7 @@
                 font-size: $p;
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
-                white-space: normal;
+                white-space: nowrap;
             }
         }
 
@@ -176,7 +176,7 @@
                 font-size: $p;
                 font-family: $font-heading-body-menu;
                 line-height: 34px;
-                white-space: normal;
+                white-space: nowrap;
             }
         }
     }
