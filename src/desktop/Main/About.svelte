@@ -129,7 +129,6 @@
 
         .about__section--left{
             @include display-flex(column, flex-start, flex-start, 1rem);
-            padding: 5vw;
 
             h4{
                 color: #434343;
@@ -173,7 +172,7 @@
         }
 
         .about__section--right{
-            padding: 5vw;
+            padding: 3vw;
             p{
                 font-size: $p;
                 font-family: $font-heading-body-menu;
@@ -193,12 +192,14 @@
             @include display-flex(column,center,center,0);
 
             .about__section--left{
+                padding: 5vw;
                 p{
                     white-space: normal;
                 }
             }
 
             .about__section--right{
+                padding: 5vw;
             @include display-flex(column-reverse,center,center,0);
 
             p{
