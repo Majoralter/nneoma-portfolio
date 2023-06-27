@@ -172,7 +172,6 @@
         }
 
         .about__section--right{
-            padding: 3vw;
             p{
                 font-size: $p;
                 font-family: $font-heading-body-menu;
