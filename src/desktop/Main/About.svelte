@@ -81,7 +81,13 @@
 
  
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <p style="color: #44AB04; cursor: pointer;" on:click={handleThis} class:thisActive={isVisible}>Read more</p>
+    <p style="color: #44AB04; cursor: pointer;" on:click={handleThis} class:thisActive={isVisible}>
+        {#if isVisible}
+            Collapse
+            {:else}
+            Read more
+        {/if}
+    </p>
     </div>
 
     <div class="about__section--right">
